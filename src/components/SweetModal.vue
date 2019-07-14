@@ -10,6 +10,8 @@
 	-->
 	<div :class="overlay_classes" v-show="is_open" v-on:click="_onOverlayClick">
 		<div :class="modal_classes" :style="modal_style">
+			<!-- 로딩패널 추가로 인해 라이브러리 수정 20190714 -->
+      		<slot name="loading"></slot>
 			<div class="sweet-box-actions">
 				<!-- Custom Actions -->
 				<slot name="box-action"></slot>
