@@ -66,11 +66,11 @@
 
 @mixin media($type) {
 	@if $type == mobile or $type == phone or $type == tablet {
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 768px) {
 			@content;
 		}
 	} @else {
-		@media screen and (min-width: 601px) {
+		@media screen and (min-width: 769px) {
 			@content;
 		}
 	}
