@@ -155,6 +155,12 @@
 				type: [Number, String],
 				required: false,
 				default: null
+			},
+
+			mobileHeight: {
+				type: [Number, String],
+				required: false,
+				default: null
 			}
 		},
 
@@ -237,6 +243,7 @@
 			modal_style() {
 				let width = this.width
 				let maxWidth = null
+				let height = this.mobileHeight
 
 				if (width !== null) {
 					if (Number(width) == width) {
@@ -246,9 +253,14 @@
 					maxWidth = 'none'
 				}
 
+				if (height !== null) {
+					height = 'calc(100vh - ' + height + 'px)'
+				}
+
 				return {
 					width,
-					maxWidth
+					maxWidth,
+					height
 				}
 			}
 		},
@@ -448,7 +460,7 @@
 		-webkit-font-smoothing: antialiased;
 
 		// Theming
-		background: rgba(#fff, 0.9);
+		background: rgba(0, 0, 0, 0.2);
 
 		&.theme-dark {
 			$color: color(dark-overlay);
