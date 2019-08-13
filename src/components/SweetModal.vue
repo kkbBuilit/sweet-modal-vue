@@ -254,7 +254,8 @@
 				}
 
 				if (height !== null) {
-					height = height + 'px'
+					height = 'calc(100vh - ' + height + 'px)'
+					// height = height + 'px'
 				}
 
 				return {
