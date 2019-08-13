@@ -161,6 +161,11 @@
 				type: [Number, String],
 				required: false,
 				default: null
+			},
+			mobileMaxHeight: {
+				type: [Number, String],
+				required: false,
+				default: null
 			}
 		},
 
@@ -244,6 +249,7 @@
 				let width = this.width
 				let maxWidth = null
 				let height = this.mobileHeight
+				let maxHeight = this.mobileMaxHeight
 
 				if (width !== null) {
 					if (Number(width) == width) {
@@ -258,10 +264,15 @@
 					// height = height + 'px'
 				}
 
+				if (maxHeight !== null) {
+					maxHeight = maxHeight + 'px'
+				}
+
 				return {
 					width,
 					maxWidth,
-					height
+					height,
+					maxHeight
 				}
 			}
 		},
