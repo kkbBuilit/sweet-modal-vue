@@ -58,7 +58,7 @@
 			</ul>
 
 			<!-- Content: Wrapper -->
-			<div class="sweet-content" ref="content" v-bind:style="{ 'height' : contentHeight }">
+			<div class="sweet-content" ref="content">
 				<!-- Icon: Error -->
 				<div class="sweet-modal-icon sweet-modal-error" v-if="icon == 'error'" ref="icon_error">
 					<span class="sweet-modal-x-mark">
@@ -164,11 +164,6 @@
 			},
 			mobileMaxHeight: {
 				type: [Number, String],
-				required: false,
-				default: null
-			},
-			contentHeight: {
-				type: String,
 				required: false,
 				default: null
 			}
