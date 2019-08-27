@@ -260,8 +260,8 @@
 				}
 
 				if (height !== null) {
-					height = 'calc(100% - ' + height + 'px)'
-					// height = height + 'px'
+					// height = 'calc(100% - ' + height + 'px)'
+					height = height + 'px'
 				}
 
 				if (maxHeight !== null) {
