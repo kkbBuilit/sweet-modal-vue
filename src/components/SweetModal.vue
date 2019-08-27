@@ -260,7 +260,7 @@
 				}
 
 				if (height !== null) {
-					height = 'calc(100vh - ' + height + 'px)'
+					height = 'calc(100% - ' + height + 'px)'
 					// height = height + 'px'
 				}
 
@@ -336,12 +336,13 @@
 			_lockBody() {
 				// this.backups.body.height = document.body.style.height
 				// this.backups.body.overflow = document.body.style.overflow
-
 				document.body.style.height = '100%'
 				document.body.style.overflow = 'hidden'
 			},
 
 			_unlockBody() {
+				// document.body.style.height = this.backups.body.height
+				// document.body.style.overflow = this.backups.body.overflow
 				document.body.style.height = ''
 				document.body.style.overflow = ''
 			},
